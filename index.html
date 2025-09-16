@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OSCP Tools Repository</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="terminal-header">
+    <div class="terminal-title">[ OSCP TOOLS REPOSITORY v2.0 ]</div>
+    <div class="terminal-controls">
+      <span class="control-btn" id="minimize">—</span>
+      <span class="control-btn" id="maximize">□</span>
+      <span class="control-btn close-btn" id="close">✕</span>
+    </div>
+  </div>
+
+  <header>
+    <h1><span class="glow">📁 OSCP TOOLS REPOSITORY</span></h1>
+    <p class="subtitle">Curated for OSCP warriors — organized by attack workflow. All tools offline-ready. No tracking. No bloat.</p>
+  </header>
+
+  <div class="search-container">
+    <input type="text" id="search" class="search" placeholder="🔍 Search tools, filenames, tags, or descriptions..." autocomplete="off" />
+    <div class="search-icon">⚡</div>
+  </div>
+
+  <div id="container" class="tools-container"></div>
+
+  <div class="tips">
+    <h3>💡 PRO TIPS</h3>
+    <ul>
+      <li><strong>Start with 01_recon_enum</strong> — always scan before you attack.</li>
+      <li><strong>02_initial_access</strong> — exploit web, services, or client-side vectors.</li>
+      <li><strong>Active Directory?</strong> → Use 03 + 05 for enum and credential dumping.</li>
+      <li><strong>Privilege Escalation</strong> → 04 has separated Windows/Linux tools.</li>
+      <li><strong>Reverse Engineering?</strong> → 06_reverse_engineering/dnSpy for .NET apps.</li>
+      <li><em>Duplicates (↔) are intentional — placed where most contextually useful.</em></li>
+    </ul>
+  </div>
+
+  <!-- Modal -->
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle" class="modal-title">Tool Info</h2>
+      <div id="modalDescription" class="modal-desc"></div>
+      <div id="modalTags" class="modal-tags"></div>
+      <div id="modalPhase" class="modal-phase"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 OSCP Tools Repository — <span class="blink">OFFLINE MODE ACTIVE</span> — No Tracking — No Bloat — v2.0</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
